@@ -1,5 +1,5 @@
 {
-  "name": "mammoth",
+  "name": "@shy1118/mammoth",
   "version": "1.6.0",
   "author": "Michael Williamson <mike@zwobble.org>",
   "description": "Convert Word documents from docx to simple HTML and Markdown",
@@ -14,7 +14,7 @@
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mwilliamson/mammoth.js.git"
+    "url": "https://github.com/shy1118999/mammoth.js.git"
   },
   "dependencies": {
     "@xmldom/xmldom": "^0.8.6",
@@ -35,10 +35,12 @@
     "duck": "^0.1.12",
     "eslint": "2.13.1",
     "hamjest": "^4.0.1",
+    "http-server": "^14.1.1",
     "mocha": "~2.2.5",
     "temp": "^0.9.4",
     "typescript": "^5.0.4",
-    "uglify-js": "~2.4.8"
+    "uglify-js": "~2.4.8",
+    "watchify": "^4.0.0"
   },
   "browser": {
     "./lib/unzip.js": "./browser/unzip.js",
@@ -48,6 +50,7 @@
     "mammoth": "bin/mammoth"
   },
   "scripts": {
+    "dev": "node bin/dev.cjs",
     "pretest": "eslint lib test",
     "test": "mocha 'test/**/*.tests.js'",
     "check-typescript": "tsc --noEmit lib/index.d.ts",
